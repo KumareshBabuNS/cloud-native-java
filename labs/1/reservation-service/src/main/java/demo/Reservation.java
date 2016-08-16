@@ -15,6 +15,7 @@ public class Reservation {
     }
 
     @Id
+
     @GeneratedValue
     private Long id;
     private String reservationName;
@@ -26,4 +27,5 @@ public class Reservation {
     public String getReservationName() {
         return reservationName;
     }
+
 }
