@@ -1,0 +1,17 @@
+server:
+  port: 8085
+
+info:
+  id: @pom.artifactId@
+  version: @project.version@
+
+spring:
+  application:
+    name: @pom.artifactId@
+  boot:
+    admin:
+      url: http://localhost:8085
+
+endpoints:
+  health:
+    sensitive: false
