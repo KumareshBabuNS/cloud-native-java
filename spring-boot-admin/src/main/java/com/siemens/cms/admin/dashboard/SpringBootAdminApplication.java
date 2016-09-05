@@ -3,9 +3,8 @@ package com.siemens.cms.admin.dashboard;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.scheduling.annotation.Scheduled;
 
@@ -15,9 +14,7 @@ import de.codecentric.boot.admin.notify.Notifier;
 import de.codecentric.boot.admin.notify.RemindingNotifier;
 import de.codecentric.boot.admin.notify.filter.FilteringNotifier;
 
-
-@Configuration
-@EnableAutoConfiguration
+@SpringBootApplication
 @EnableAdminServer
 public class SpringBootAdminApplication {
 

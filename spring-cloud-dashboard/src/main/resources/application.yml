@@ -14,7 +14,7 @@ eureka:
 
 spring:
   application:
-    name: Spring-Cloud-Dashboard
+    name: spring-cloud-dashboard
   cloud:
     dashboard:
       turbine:

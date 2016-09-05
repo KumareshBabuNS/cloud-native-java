@@ -1,0 +1,30 @@
+info:
+  name: "Zuul Server"
+  description: "Gatekeeper"
+  version: "0.0.1-SNAPSHOT"
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    reservation-client:
+      path: /reservation/**
+      serviceId: reservation-client
+
+spring:
+  boot:
+    admin:
+      url: http://localhost:8085
+
+server:
+  port: 8765
+
+eureka:
+  instance:
+    metadata-map:
+      cluster: ZUUL-SERVER
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    

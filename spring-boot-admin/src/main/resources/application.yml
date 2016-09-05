@@ -4,6 +4,11 @@ server:
 info:
   id: @pom.artifactId@
   version: @project.version@
+  description: Admin service
+
+endpoints:
+  health:
+    sensitive: false
 
 spring:
   application:
@@ -11,7 +16,3 @@ spring:
   boot:
     admin:
       url: http://localhost:8085
-
-endpoints:
-  health:
-    sensitive: false
