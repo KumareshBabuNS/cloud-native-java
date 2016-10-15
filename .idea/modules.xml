@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/TcpConnection/TcpConnection.iml" filepath="$PROJECT_DIR$/TcpConnection/TcpConnection.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cloud-native-java.iml" filepath="$PROJECT_DIR$/.idea/cloud-native-java.iml" />
     </modules>
   </component>
