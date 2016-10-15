@@ -94,6 +94,7 @@
 	</repositories>
 	
 	<build>
+		<finalName>turbine-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

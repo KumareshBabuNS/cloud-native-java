@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+info:
+  id: ${spring.application.name}
+  name: "Config Service"
+  version: "0.0.1-SNAPSHOT"
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native  # For local file repository only
+  cloud:
+    config:
+      enabled: true
+      server:
+        native:
+          searchLocations: file:///${user.home}/config-repo/{profile}
+  boot:
+    admin:
+      url: http://localhost:8085
+
