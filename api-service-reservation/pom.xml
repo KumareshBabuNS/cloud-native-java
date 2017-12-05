@@ -10,14 +10,25 @@
 
 	<name>api-service for reservation</name>
 	<description>The service for reservation</description>
-	
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
-        <relativePath/>
-        <!-- lookup parent from repository -->
+        <version>1.5.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Camden.SR5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,11 +71,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- client support for spring boot admin -->
-		<dependency>
-		    <groupId>de.codecentric</groupId>
-		    <artifactId>spring-boot-admin-starter-client</artifactId>
-		    <version>1.4.1</version>
-		</dependency>
+        <!--<dependency>-->
+        <!--<groupId>de.codecentric</groupId>-->
+        <!--<artifactId>spring-boot-admin-starter-client</artifactId>-->
+        <!--<version>1.4.1</version>-->
+        <!--</dependency>-->
       	<!--  <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -82,18 +93,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.SR5</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>

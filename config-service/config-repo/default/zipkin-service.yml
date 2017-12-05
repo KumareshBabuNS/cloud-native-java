@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    initialize: false
+  sleuth:
+    enabled: false
+
+zipkin:
+  store:
+    type: mem
+
+server:
+  port: 9411
+
+eureka:
+  instance:
+    preferIpAddress: false
+    instanceId: ${spring.application.name}:${server.port}-${random.value}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    registry-fetch-interval-seconds: 5
+
+management:
+  security:
+    enabled: false
